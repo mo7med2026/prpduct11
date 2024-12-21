@@ -1,0 +1,106 @@
+
+
+:root{
+--cream-color:hsl(30, 38%, 92%)
+--dark-cyan:hsl(158, 36%, 37%)
+--dark-blue:hsl(212, 21%, 14%)
+--dark-gray:hsl(228, 12%, 48%)
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: 'monttserrst', sans-serif;
+    background: var(--cream-color);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+#product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+#product img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#product .product-content{
+    background-color: #fff;
+    padding: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#product .product-content .category{
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: darkgray;
+}
+#product .product-content h1{
+    font-family: 'fraunces', serif;
+    font-size: 32px;
+    line-height: 1;
+    margin: 20px 0 ;
+    color: hsl(212, 21%, 14%);
+}
+#product .product-content p{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%) ;
+    line-height: 1.6;
+}
+#product .product-content .price{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+#product .product-content .price .discount-price{
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    font-family: 'fraunces', serif;
+    margin-right: 20px;
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(158, 36%, 37%) ;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.cart::before{
+    content: "";
+    background: url("./images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+}
+@media (max-width: 700px){
+#product{
+    grid-template-columns: 1fr;
+
+}
+#product img{
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+}
+#product .product-content{
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+}
+}
+
